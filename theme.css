@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+    background: grey;
+}
+.container{
+    width: 800px;
+    padding-top: 5rem;
+    margin: 0 auto;
+}
+.card{
+    border-radius: 6px;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 2px 3px 10px rgba(0,0,0,0.2);
+}
+.btn{
+    color: #43b983;
+    position: relative;
+    border-radius: 99px;
+    border: 1px solid #43b983;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .5rem 1.5rem;
+    font-weight: 700;
+    outline: none;
+    background: #fff;
+    transition: all .22s;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.btn.primary{
+    background: #43b983;
+    color: #ffffff;
+}
+.btn:active{
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,.3);
+}
+.btn:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+input[type=file]{
+    display: none;
+}
+.preview{
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5rem;
+}
+.preview-img{
+    position: relative;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+    overflow: hidden;
+}
+.preview-img.removing{
+    transform: scale(0);
+    transition: transform .3s;
+}
+.preview-img:hover .preview-remove{
+    opacity: 1;
+}
+.preview-img:hover .preview-info{
+    bottom: 4px;
+}
+.preview-img img{
+    width: 180px;
+    height: auto;
+}
+.preview-remove{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    font-weight: bold;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: rgba(255,255,255,.5);
+    transition: opacity .22s;
+}
+.preview-info{
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    left: 0;
+    height: 24px;
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    transition: bottom .22s;
+    background: rgba(255,255,255,.5);
+}
+.preview-info-progress{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #43b983;
+    text-align: center;
+    transition: width .22s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
